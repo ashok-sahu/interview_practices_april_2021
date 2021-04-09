@@ -11,7 +11,7 @@ let doSomeMagic = function(fn,delay){
         arg = arguments;
         clearTimeout(timer)
         timer = setTimeout(()=>{
-            getData.apply(context,arg)
+            fn.apply(context,arg)
         },delay)
     }
 }
